@@ -1,0 +1,59 @@
+\documentclass[a4paper,14pt]{extreport}
+
+% packages to support Cyrillic fonts, needed to write abstracts
+\usepackage[T2A]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[russian,english]{babel}
+\usepackage{csquotes}
+\usepackage{svg}
+
+% usual packages
+\usepackage[left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
+
+\usepackage{graphicx} % to add figures
+\graphicspath{{figures/}}
+
+\usepackage{hyperref} % to add clickable contents menu
+
+\usepackage[style=numeric]{biblatex}
+\addbibresource{bibliography.bib}
+
+\usepackage{blindtext}
+
+% the following three definitions are to be changed by student
+\def\myauthor{
+  Sultan Saliev
+  Azamat Rsymbetov
+} % author
+\def\mycoach{Ualikhan Sadyk} % coach, adviser etc.
+\def\mytitle{algomalgo.com - Web Platform for learning Algorithms} % title
+\def\mydegree{Bachelor in Computer Science}
+\def\mydegreecode{6B06102}
+
+% preamble ends here
+
+\begin{document}
+% don't touch these two lines :)
+\input{titlepage1}
+\input{titlepage2}
+
+% edit abstracts
+\input{abstract_english}
+\input{abstract_kazakh}
+\input{abstract_russian}
+\tableofcontents
+
+% edit your chapters
+\input{introduction}
+\input{chapterA}
+\input{chapterB}
+\input{chapterC}
+\input{implementation}
+\input{conclusion}
+
+\appendix
+\input{appendixA}
+\input{appendixB}
+\printbibliography[heading=bibintoc,title={References}]
+
+\end{document}
